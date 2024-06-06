@@ -28,8 +28,26 @@ class Post extends Model
             ->innerJoin('p', 'categories', 'c', 'c.id = p.category_id')
             ->orderBy('p.id', 'desc')
             ->fetchAllAssociative();
+            
     }
-
+    public function findByCategory($category_id)
+    {
+        return $this->queryBuilder
+            ->select('*')
+            ->from($this->tableName)
+            ->where('category_id = ?')
+            ->setParameter(0, $category_id)
+            ->fetchAllAssociative();
+    }
+    public function findByID($id)
+    {
+        return $this->queryBuilder
+            ->select('*')
+            ->from($this->tableName)
+            ->where('id = ?')
+            ->setParameter(0, $id)
+            ->fetchAssociative();
+    }
     //     public function paginate($page = 1, $perPage = 5)
     //     {
     //         $queryBuilder = clone($this->queryBuilder);

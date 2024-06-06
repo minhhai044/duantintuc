@@ -7,4 +7,5 @@ use Minhhai\Duan\Commons\Model;
 class Category extends Model
 {
     protected string $tableName = 'categories';
+    
 }

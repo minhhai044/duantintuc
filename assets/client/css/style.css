@@ -126,7 +126,27 @@ nav .container {
 .login{
   position: absolute;
   top: 25px;
-  right: 50px;
+  right: 60px;
+}
+.login-admin{
+  position: absolute;
+  top: 45px;
+  right: 60px;
+}
+.login-admin a{
+  font-size: 15px;
+  text-decoration: none;
+  color: red;
+}
+.logout{
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+.logout a{
+  font-size: 15px;
+  text-decoration: none;
+  color: red;
 }
 .logo {
   display: flex;
@@ -619,12 +639,14 @@ FOR MOBILE
   /* =========
     ARTICLE PAGE
     ==========*/
-  .article-page {
-    grid-template-columns: 1fr;
-    text-align: justify;
-  }
-
-  .article-page > *:first-child > *:nth-child(3) {
-    flex-direction: column;
-  }
+    .article-page {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+    }
+    
+    .article-page > article:first-child > div:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+    }
 }
