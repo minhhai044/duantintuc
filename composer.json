@@ -1,0 +1,24 @@
+{
+    "name": "minhhai/duan",
+    "autoload": {
+        "psr-4": {
+            "Minhhai\\Duan\\": "src/"
+        },
+        "files": [
+            "helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "minhhai044",
+            "email": "tmhai2004@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "~1.6",
+        "eftec/bladeone": "^4.13",
+        "doctrine/dbal": "^4.0",
+        "rakit/validation": "^1.4",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
