@@ -52,12 +52,11 @@
             </div>
         </div>
         <div class="card-content">
-            <table class="table is-hoverable is-bordered is-fullwidth" id="datatable">
+            <table style="text-align: center" class="table is-hoverable is-bordered is-fullwidth" id="datatable">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Excerpt</th>
                         <th>Image</th>
                         <th>Category</th>
                         <th>Time Create</th>
@@ -70,9 +69,8 @@
                         <tr>
                             <td>{{ $post['id'] }}</td>
                             <td>{{ $post['title'] }}</td>
-                            <td>{{ $post['excerpt'] }}</td>
                             <td>
-                                <img src="{{ asset($post['img_post']) }}" width="100px" alt="">
+                                <img src="{{ asset($post['img_post']) }}" width="100px" style="height: 80px" alt="">
                             </td>
                             <td>{{ $post['c_name'] }}</td>
                             <td>{{ $post['time_created'] }}</td>

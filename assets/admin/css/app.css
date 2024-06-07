@@ -72,15 +72,19 @@ textarea {
 }
 
 .table th {
+    text-align: center;
     border: 1px solid #f4f5f8;
 }
 
 .table.is-bordered tr:last-child th {
     border-bottom-width: 2px;
     border-top-width: 2px;
+    text-align: center;
+
 }
 
 .table td {
+    
     border: 1px solid #f4f5f8;
 }
 
@@ -598,8 +602,8 @@ table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
     font-family: 'Font Awesome 5 Free';
     margin-left: 5px;
-    right: 0.5rem;
-    top: 0.5rem;
+    text-align: center;
+
 }
 
 table.dataTable thead .sorting:after {

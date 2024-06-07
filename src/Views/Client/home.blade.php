@@ -26,7 +26,7 @@
         <div class="articles">
             @foreach ($posts as $post)
                 <a href="{{url('detail/') . $post['id']}}" class="card">
-                    <img src="{{ $post['img_post'] }}" alt="" />
+                    <img src="{{ $post['img_post'] }}" style="width:300px ; height:200px" alt="" />
                     <article>
                         <p class="entertainment-category">{{ $post['c_name'] }}</p>
                         <h1>{{ $post['title'] }}</h1>

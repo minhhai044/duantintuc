@@ -11,8 +11,8 @@
         <h1 class="editor-h1">Danh Sách</h1>
         <div class="articles">
             @foreach ($listcategory as $list)
-                    <a href="" class="card">
-                        <img src="../{{ $list['img_post'] }}" alt="">
+                    <a href="{{url("detail/{$list['id']}")}}" class="card">
+                        <img src="../{{ $list['img_post'] }}" style="width:300px ; height:200px" alt="">
 
                         <article>
                             <h1>{{ $list['title'] }}</h1>

@@ -62,7 +62,7 @@
             </div>
 
             <div class="navbar-item">
-                <a class="button is-white app-logout" href="#">
+                <a class="button is-white app-logout" href="{{url()}}">
                     <span class="icon">
                         <i class="fa fa-lg fa-power-off"></i>
                     </span>
@@ -84,7 +84,7 @@
                         Settings
                     </a> --}}
                     <hr class="navbar-divider">
-                    <a href="{{ url('admin/logout') }}" class="navbar-item app-logout">
+                    <a href="{{url('logout')}}" class="navbar-item app-logout">
                         Logout
                     </a>
                 </div>

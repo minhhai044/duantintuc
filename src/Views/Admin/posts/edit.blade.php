@@ -100,7 +100,7 @@
             </div>
             <div class="field is-grouped">
                 <div class="control">
-                    <button type="submit" class="button is-link">Submit</button>
+                    <button type="submit" onclick="return confirm('Chắc chắn update không?');" class="button is-link">Submit</button>
                 </div>
                 <div class="control">
                     <button class="button is-text"><a href="{{ url('admin/posts') }}">Cancel</a></button>

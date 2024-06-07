@@ -27,8 +27,9 @@ class Post extends Model
             ->from($this->tableName, 'p')
             ->innerJoin('p', 'categories', 'c', 'c.id = p.category_id')
             ->orderBy('p.id', 'desc')
+            ->setMaxResults(6)  
+            ->setFirstResult(0)
             ->fetchAllAssociative();
-            
     }
     public function findByCategory($category_id)
     {

@@ -41,23 +41,23 @@ window.onload = function() {
 
     const logout = getAll('.app-logout');
 
-    logout.forEach(function ($el) {
-        $el.addEventListener('click', function (e) {
-            e.preventDefault();
+    // logout.forEach(function ($el) {
+    //     $el.addEventListener('click', function (e) {
+    //         e.preventDefault();
 
-            Swal.fire({
-                title: "Are you sure?",
-                text: "Your session will be ended!",
-                icon: "warning",
-                showCancelButton: true,
-                // confirmButtonColor: "#3085d6",
-                // cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, log me out!"
-            }).then((result) => {
-
-            });
-        });
-    });
+    //         Swal.fire({
+    //             title: "Are you sure?",
+    //             text: "Your session will be ended!",
+    //             icon: "warning",
+    //             showCancelButton: true,
+    //             // confirmButtonColor: "#3085d6",
+    //             // cancelButtonColor: "#d33",
+    //             confirmButtonText: "Yes, log me out!"
+    //         }).then((result) => {
+    //             URL('logot')
+    //         });
+    //     });
+    // });
 
     const sidebarMenus = getAll('#sidebar ul li a');
 
