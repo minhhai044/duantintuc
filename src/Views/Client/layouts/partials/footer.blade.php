@@ -3,7 +3,7 @@
         <article>
             <div class="logo">
                 <i class="fas fa-globe fa-2x"></i>
-                <h2>News<span>Grid</span></h2>
+                <h3>News<span>Grid</span></h3>
             </div>
             <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
@@ -13,14 +13,14 @@
         </article>
 
         <article>
-            <h4>EMAIL BẢN TIN</h4>
+            <h5>EMAIL BẢN TIN</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
             <input type="email" placeholder="Nhập email..." />
             <a href="#"> Đăng ký</a>
         </article>
 
         <article>
-            <h4>LIÊN KẾT TRANG</h4>
+            <h5>LIÊN KẾT TRANG</h5>
             <p>Hỗ trợ & trợ giúp</p>
             <p>Chính sách bảo mật</p>
             <p>Về chúng tôi</p>
@@ -28,7 +28,7 @@
         </article>
 
         <article>
-            <h4>THAM GIA CLB CỦA CHÚNG TÔI</h4>
+            <h5>THAM GIA CLB CỦA CHÚNG TÔI</h5>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Obcaecati, maiores!

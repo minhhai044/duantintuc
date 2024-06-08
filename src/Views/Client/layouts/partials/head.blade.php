@@ -19,6 +19,11 @@
     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <title>News Hot | Trang chủ</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/eaa4609b2f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('assets/client/css/style.css') }}" />

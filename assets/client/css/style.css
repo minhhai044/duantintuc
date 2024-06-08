@@ -15,7 +15,14 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
+.paginate{
+  display: flex;
+  margin: 30px 0px;
+justify-content: center;
+}
+.sec-content{
+  margin-bottom: 40px;
+}
 p {
   line-height: 1.5rem;
   padding: 0.5rem 0rem;
@@ -40,7 +47,38 @@ body {
 img {
   width: 100%;
 }
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
 
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  display: block;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
 .sports-category,
 .entertainment-category,
 .technology-category {
@@ -120,18 +158,18 @@ nav .container {
   height: 68px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: relative;
 }
 .login{
   position: absolute;
-  top: 25px;
-  right: 60px;
+  top: 22px;
+  right: 44px;
 }
 .login-admin{
   position: absolute;
-  top: 45px;
-  right: 60px;
+  top: 40px;
+  right: 44px;
 }
 .login-admin a{
   font-size: 15px;
@@ -140,7 +178,7 @@ nav .container {
 }
 .logout{
   position: absolute;
-  top: 25px;
+  top: 20px;
   right: 10px;
 }
 .logout a{
@@ -197,8 +235,15 @@ nav .container {
 .logo span {
   color: var(--primary-color);
 }
-
+.search{
+  position: absolute;
+  width: 234px;
+  right: 250px;
+  top: 16px;
+}
 .social {
+  position: absolute;
+  left: 74px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0.4rem;
@@ -219,9 +264,14 @@ nav .container {
   color: black;
   margin: 0px 10px;
 }
+.options{
+  position: absolute;
+    right: -10px;
+
+}
 .options a {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 15px;
   font-size: 1.05rem;
   font-weight: 400;
   color: black;
@@ -316,6 +366,13 @@ ARTICLES
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
+  position: relative;
+}
+.view{
+  position: absolute;
+  bottom: -11px;
+  right: 41px;
+  color: #ADB5DB;
 }
 
 /* .articles > a:nth-child(1),
@@ -358,7 +415,9 @@ ARTICLES
   text-decoration: none;
   color: black;
 }
-
+.card img{
+  width: 100%;
+}
 .card:hover {
   box-shadow: 3px 5px 10px rgb(199, 199, 199);
 }
@@ -560,6 +619,7 @@ FOR TABLET
 
   .social {
     display: none;
+    
   }
  
 

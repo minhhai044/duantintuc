@@ -12,13 +12,14 @@
         <div class="articles">
             @foreach ($listcategory as $list)
                     <a href="{{url("detail/{$list['id']}")}}" class="card">
-                        <img src="../{{ $list['img_post'] }}" style="width:300px ; height:200px" alt="">
+                        <img src="../{{ $list['img_post'] }}" style=" height:200px" alt="">
 
                         <article>
-                            <h1>{{ $list['title'] }}</h1>
+                            <h4 style="margin-top: 10px">{{ $list['title'] }}</h4>
                             <p>
                                 {{ $list['excerpt'] }}
                             </p>
+                            <p class="view">Lượt xem : {{$list['view']}}</p>
                         </article>
                     </a>
                 @endforeach

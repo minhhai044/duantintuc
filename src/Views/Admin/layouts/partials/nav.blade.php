@@ -1,5 +1,5 @@
 <aside class="menu">
-    <p class="menu-label is-hidden-touch">
+    <p class="menu-label is-hidden-touch ">
         General
     </p>
     <ul class="menu-list">

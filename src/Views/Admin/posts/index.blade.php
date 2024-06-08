@@ -14,9 +14,13 @@
         @endphp
     @endif
     <div class="card">
+
         <div class="card-filter">
+            
             <div class="field">
+
                 <div class="control has-icons-left has-icons-right">
+                    
                     <input class="input" id="table-search" type="text" placeholder="Search for records...">
                     <span class="icon is-left">
                         <i class="fa fa-search"></i>
@@ -52,6 +56,8 @@
             </div>
         </div>
         <div class="card-content">
+            <h2 style="font-size: 20px;margin-bottom:15px ">List Posts</h2>
+
             <table style="text-align: center" class="table is-hoverable is-bordered is-fullwidth" id="datatable">
                 <thead>
                     <tr>
@@ -59,6 +65,7 @@
                         <th>Title</th>
                         <th>Image</th>
                         <th>Category</th>
+                        <th>View</th>
                         <th>Time Create</th>
                         <th>Time Update</th>
                         <th class="has-text-centered">Action</th>
@@ -73,6 +80,7 @@
                                 <img src="{{ asset($post['img_post']) }}" width="100px" style="height: 80px" alt="">
                             </td>
                             <td>{{ $post['c_name'] }}</td>
+                            <td>{{ $post['view'] }}</td>
                             <td>{{ $post['time_created'] }}</td>
                             <td>{{ $post['time_updated'] }}</td>
                             <td class="has-text-centered">

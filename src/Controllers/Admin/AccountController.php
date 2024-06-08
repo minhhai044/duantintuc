@@ -29,4 +29,9 @@ class AccountController extends Controller{
         $this->account->update($id,$data);
         header('location:' .url('admin/accounts'));
     }
+    public function delete($id){
+        $this->account->delete($id);
+        header('location:'.url('admin/accounts'));
+        exit;
+    }
 }

@@ -27,8 +27,8 @@
     <div class="container">
         <section class="article-page">
             <article>
-                <img src="../{{ $datadetails['img_post'] }}" alt="">
-                <h2>{{ $datadetails['title'] }}</h2>
+                <h3 style="">{{ $datadetails['title'] }}</h3>
+                <img style="margin-top: 6px;" src="../{{ $datadetails['img_post'] }}" alt="">
                 <div>
                     <p>
                         <i class="fas fa-user fa-1x"></i> Viết bởi XYZ {{ $datadetails['time_created'] }}

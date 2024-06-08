@@ -8,7 +8,7 @@ nav .navbar-dropdown {
 
 #sidebar {
     padding: 0;
-    background: #292C3A;
+    background: #64c5b1;
 }
 
 #sidebar .menu {
@@ -16,32 +16,35 @@ nav .navbar-dropdown {
 }
 
 #sidebar p.menu-label {
-    color: #868aa8;
+    color: white;
     padding: 0px 40px;
     margin-top: 20px;
 }
 
 #sidebar li a, #touchMenu a {
-    color: #868aa8;
+    color: white;
     padding: 9px 40px;
 }
 
 #sidebar li a .icon {
-    color: #525672;
+    color: white;
 }
 
 #sidebar li a.is-active, #touchMenu a.is-active {
-    color: #8D68AB;
+    color: white;
     background-color: transparent;
 }
 
 #sidebar a.is-active .icon {
-    color: #868aa8;
+    color: white;
 }
-
+#sidebar a.is-active:hover {
+    background-color: white;
+    color: #218470;
+}
 #sidebar a:hover {
     transition: background-color .3s;
-    background-color: #2C2F3D;
+    color: #218470;
 }
 
 #sidebar a:hover .icon {
@@ -68,7 +71,8 @@ button,
 input,
 select,
 textarea {
-    font-family: Poppins;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .table th {
@@ -122,9 +126,6 @@ textarea {
     white-space: nowrap;
 }
 
-#app-header .navbar-brand {
-    background: #282a3c;
-}
 
 .navbar-burger {
     cursor: pointer;
@@ -328,7 +329,7 @@ body {
 }
 
 nav.navbar {
-    border-top: 4px solid #8D68AB;
+    border-top: 4px solid aquamarine;
     -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .1);
     box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .1);
 }
@@ -411,13 +412,13 @@ nav.navbar {
 }
 
 #app-header .navbar-brand {
-    background: #282a3c;
+    background: #51ac9a;
 }
 
 #app-header .navbar-brand .navbar-item:first-child {
     padding: 0 40px;
     text-transform: bold;
-    color: #C7C8D2;
+    color: white;
     font-weight: bold;
     font-size: 1.2rem;
     height: 100%;

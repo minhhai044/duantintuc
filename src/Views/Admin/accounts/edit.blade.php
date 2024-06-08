@@ -46,7 +46,7 @@
                 </label>
             </div>
             <button style="margin-top:10px" onclick="return confirm('Chắc chắn update không?');" type="submit" class="button is-link is-outlined">Update</button>
-            <button style="margin-top:10px; " class="button is-primary is-outlined"><a style="color:rgb(14, 187, 144)" href="{{url('admin/accounts')}}">List account</a></button>
+            <button style="margin-top:10px; " class="button is-primary is-outlined"><a style="color:rgb(130, 235, 209)" href="{{url('admin/accounts')}}">List account</a></button>
         </form>
     </div>
 @endsection

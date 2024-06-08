@@ -26,5 +26,6 @@ $router->mount('/admin', function () use ($router) {
         $router->get('/', AccountController::class . '@index');  // Danh sách
         $router->get('/{id}/editaccount', AccountController::class . '@formedit');  // Danh sách
         $router->post('/{id}/update', AccountController::class . '@updateUser');  // Danh sách
+        $router->get('/{id}/delete', AccountController::class . '@delete');  // Danh sách
     });
 });

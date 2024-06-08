@@ -22,9 +22,8 @@ class PostController extends Controller
     public function index()
     {
         $posts = $this->post->all();
-
         $this->renderViewAdmin('posts.index', [
-            'posts' => $posts
+            'posts' => $posts,
         ]);
     }
 

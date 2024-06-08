@@ -7,6 +7,7 @@
 @section('content')
     <div class="card">
         <div class="card-content">
+            <h2 style="font-size: 20px;margin-bottom:15px ">List Categories</h2>
             <table style="text-align: center" class="table is-hoverable is-bordered is-fullwidth" id="datatable">
                 <thead>
                     <tr>

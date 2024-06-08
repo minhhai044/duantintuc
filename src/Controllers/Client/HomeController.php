@@ -18,11 +18,24 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $posts = $this->post->all();
+        $_SESSION['page'] = 1;
+        [$data, $totalPage] = $this->post->paginate();
         $categories = $this->category->all();
         $this->renderViewClient('home', [
-            'posts' => $posts,
-            'categories' => $categories
+            'posts' => $data,
+            'categories' => $categories,
+            'totalPage' => $totalPage
+        ]);
+    }
+    public function paginate($id)
+    {
+        $_SESSION['page'] = $id;
+        [$data, $totalPage] = $this->post->paginate($page = $id);
+        $categories = $this->category->all();
+        $this->renderViewClient('home', [
+            'posts' => $data,
+            'categories' => $categories,
+            'totalPage' => $totalPage
         ]);
     }
     public function listcategory($id)
@@ -41,12 +54,41 @@ class HomeController extends Controller
     public function detail($id)
     {
         $datadetails = $this->post->findByID($id);
-        // Helper::debug($datadetails);
+        $view = $datadetails['view'] + 1;
         $categories = $this->category->all();
 
+        $data = [
+            'view' => $view,
+        ];
+
+        // Update the post's view count
+        $this->post->update($id, $data);
+
+        // Render the detail view with categories and post details
         $this->renderViewClient('detail', [
             'categories' => $categories,
             'datadetails' => $datadetails
+        ]);
+    }
+    public function about()
+    {
+        $categories = $this->category->all();
+
+        $this->renderViewClient('about', [
+            'categories' => $categories
+        ]);
+    }
+    public function search()
+    {
+
+        $kyw = $_POST['kyw'];
+        $categories = $this->category->all();
+        $datas =  $this->post->searchKey($kyw);
+        $_SESSION['kyw'] = $datas;
+        $this->renderViewClient('search', [
+            'datas' => $datas,
+            'categories' => $categories
+
         ]);
     }
 }
