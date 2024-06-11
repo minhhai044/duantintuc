@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-{{-- @section('title')
-    Quản lý Sản phẩm
-@endsection --}}
+@section('title')
+    Giới Thiệu
+@endsection
 
 @section('content')
     <div class="container">
@@ -30,21 +30,20 @@
 
             </article>
 
-            <article>
-                <h3>Tin tức liên quan</h3>
+            <article class="lienhe">
+                <h3>Liên hệ ngay</h3>
                 <ul>
-                    <li>Thể Thao</li>
-                    <li>Giải Trí</li>
-                    <li>Công Nghệ</li>
-                    <li>Thời Trang</li>
-                    <li>Mua Sắm</li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100041666683033">Facebook</a></li>
+                    <li><a href="https://discord.gg/PU5YvwnK">Discord</a></li>
+                    <li><a href="https://www.tiktok.com/@m.hai.04">Tiktok</a></li>
+                    <li><a href="https://www.instagram.com/m.haijr_/">Instagram</a></li>      
                 </ul>
             </article>
 
             <article>
                 <h3>Tham gia câu lạc bộ của chúng tôi</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, id?</p>
-                <a href="#">Tham gia ngay</a>
+                <p>Hãy tham gia câu lạc bộ của chúng tôi để có được những thông tin hữu ích nhé!</p>
+                <a href="https://www.facebook.com/profile.php?id=100041666683033">Tham gia ngay</a>
             </article>
         </section>
     </div>

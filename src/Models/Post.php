@@ -18,7 +18,7 @@ class Post extends Model
                 'p.title',
                 'p.excerpt',
                 'p.img_post',
-                'p.img_header',
+                // 'p.img_header',
                 'p.content',
                 'p.view',
                 'p.time_created',
@@ -82,7 +82,7 @@ class Post extends Model
                 'p.title',
                 'p.excerpt',
                 'p.img_post',
-                'p.img_header',
+                // 'p.img_header',
                 'p.content',
                 'p.view',
                 'p.time_created',
@@ -91,6 +91,7 @@ class Post extends Model
             )
             ->from($this->tableName, 'p')
             ->innerJoin('p', 'categories', 'c', 'c.id = p.category_id')
+            // ->innerJoin('p', 'accounts', 'a', 'a.id = p.account_id')
             ->setFirstResult($offset)
             ->setMaxResults($perPage)
             ->orderBy('p.id', 'desc')

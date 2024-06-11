@@ -2,6 +2,7 @@
 
 use Minhhai\Duan\Controllers\Admin\AccountController;
 use Minhhai\Duan\Controllers\Admin\CategoryController;
+use Minhhai\Duan\Controllers\Admin\CommentController;
 use Minhhai\Duan\Controllers\Admin\DashboardController;
 use Minhhai\Duan\Controllers\Admin\PostController;
 
@@ -27,5 +28,9 @@ $router->mount('/admin', function () use ($router) {
         $router->get('/{id}/editaccount', AccountController::class . '@formedit');  // Danh sách
         $router->post('/{id}/update', AccountController::class . '@updateUser');  // Danh sách
         $router->get('/{id}/delete', AccountController::class . '@delete');  // Danh sách
+    });
+    $router->mount('/comments', function () use ($router) {
+        $router->get('/', CommentController::class . '@index');  // Danh sách
+        $router->get('/{id}/show', CommentController::class . '@show');
     });
 });

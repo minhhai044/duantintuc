@@ -1,9 +1,11 @@
 @extends('layouts.master')
-
+@section('title')
+    Trang Chủ | NewsHot
+@endsection
 @section('content')
     <header class="showcase">
         <div class="container">
-            <div class="text-content">
+            {{-- <div class="text-content">
                 <p class="sports-category">thể thao</p>
                 <h1>một bài viết thể thao</h1>
                 <p>
@@ -13,7 +15,7 @@
                     laboriosam sequi animi?
                 </p>
                 <a href="./html/article.html">Đọc thêm</a>
-            </div>
+            </div> --}}
         </div>
     </header>
     <section class="sec-content">

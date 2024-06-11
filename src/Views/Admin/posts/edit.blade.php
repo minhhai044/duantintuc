@@ -43,7 +43,7 @@
                         placeholder="Text Excerpt">
                 </div>
             </div>
-            <div class="field">
+            {{-- <div class="field">
                 <div class="file is-primary">
 
                     <label class="file-label">
@@ -59,7 +59,7 @@
                     </label>
                 </div>
                 <img src="{{ asset($post['img_header']) }}" style="margin-top: 10px" width="100px" alt="">
-            </div>
+            </div> --}}
 
             <div class="field">
                 <div class="file is-primary">

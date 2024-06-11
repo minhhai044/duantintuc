@@ -4,17 +4,24 @@ namespace Minhhai\Duan\Controllers\Client;
 
 use Minhhai\Duan\Commons\Controller;
 use Minhhai\Duan\Commons\Helper;
+use Minhhai\Duan\Models\Account;
 use Minhhai\Duan\Models\Category;
+use Minhhai\Duan\Models\Comment;
 use Minhhai\Duan\Models\Post;
+use Rakit\Validation\Validator;
 
 class HomeController extends Controller
 {
     private Post $post;
     private Category $category;
+    private Account $account;
+    private Comment $comment;
     public function __construct()
     {
         $this->post = new Post();
         $this->category = new Category();
+        $this->account = new Account();
+        $this->comment = new Comment();
     }
     public function index()
     {
@@ -54,9 +61,10 @@ class HomeController extends Controller
     public function detail($id)
     {
         $datadetails = $this->post->findByID($id);
+        $acc = $this->account->findByID($datadetails['account_id']);
+        $listComment = $this->comment->findByIdPro($id);
         $view = $datadetails['view'] + 1;
         $categories = $this->category->all();
-
         $data = [
             'view' => $view,
         ];
@@ -67,7 +75,9 @@ class HomeController extends Controller
         // Render the detail view with categories and post details
         $this->renderViewClient('detail', [
             'categories' => $categories,
-            'datadetails' => $datadetails
+            'datadetails' => $datadetails,
+            'acc' => $acc,
+            'listComment' => $listComment
         ]);
     }
     public function about()
@@ -90,5 +100,34 @@ class HomeController extends Controller
             'categories' => $categories
 
         ]);
+    }
+    public function comment()
+    {
+
+        $validator = new Validator;
+
+        // make it
+        $validation = $validator->make($_POST, [
+            'content'              => 'required|min:10',
+        ]);
+
+        // then validate
+        $validation->validate();
+
+        if ($validation->fails()) {
+            $_SESSION['errComment'] = $validation->errors()->firstOfAll();
+            header('location: ' . url('detail/' . $_POST['post_id']));
+            
+            exit;
+        } else {
+            $data = [
+                'content' => $_POST['content'],
+                'post_id' => $_POST['post_id'],
+                'account_id' => $_POST['account_id'],
+                'nameuser' => $_SESSION['account']['name'],
+            ];
+        }
+        $this->comment->insert($data);
+        header('location: ' . url('detail/' . $_POST['post_id']));
     }
 }

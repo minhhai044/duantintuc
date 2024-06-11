@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-{{-- @section('title')
-    Quản lý Sản phẩm
-@endsection --}}
+@section('title')
+    Danh Mục
+@endsection
 
 @section('content')
 <section>

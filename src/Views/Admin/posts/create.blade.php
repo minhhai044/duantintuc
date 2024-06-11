@@ -32,7 +32,7 @@
                     <input class="input" name="excerpt" type="text" placeholder="Text Excerpt">
                 </div>
             </div>
-            <div class="field">
+            {{-- <div class="field">
                 <div class="file is-primary">
 
                     <label class="file-label">
@@ -48,7 +48,7 @@
                         </span>
                     </label>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="field">
                 <div class="file is-primary">

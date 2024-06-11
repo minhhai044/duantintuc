@@ -25,7 +25,7 @@ justify-content: center;
 }
 p {
   line-height: 1.5rem;
-  padding: 0.5rem 0rem;
+  /* padding: 0.5rem 0rem; */
 }
 
 h1,
@@ -163,7 +163,7 @@ nav .container {
 }
 .login{
   position: absolute;
-  top: 22px;
+  top: 25px;
   right: 44px;
 }
 .login-admin{
@@ -178,7 +178,7 @@ nav .container {
 }
 .logout{
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 10px;
 }
 .logout a{
@@ -238,7 +238,7 @@ nav .container {
 .search{
   position: absolute;
   width: 234px;
-  right: 250px;
+  right: 270px;
   top: 16px;
 }
 .social {
@@ -263,10 +263,15 @@ nav .container {
   text-decoration: none;
   color: black;
   margin: 0px 10px;
+  font-weight: 500;
+}
+.social a:hover{
+  
+  color: #F02525;
 }
 .options{
   position: absolute;
-    right: -10px;
+    right: -5px;
 
 }
 .options a {
@@ -297,7 +302,7 @@ SHOWCASE
   position: relative;
   color: white;
   height: 60vh;
-  background: url(../images/background.jpg) center center/cover;
+  background: url(../images/banner.jpg) center center/cover;
 }
 
 .showcase::before {
@@ -307,7 +312,6 @@ SHOWCASE
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .showcase .container {
@@ -552,7 +556,18 @@ ARTICLE PAGE
   grid-gap: 1.5rem;
   margin: 1.7rem 0rem;
 }
-
+.article-page-binhluan{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 1.5rem;
+  margin-top: 1.7rem;
+}
+.article-page-binhluan2{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-gap: 1.5rem;
+  margin-bottom: 1.7rem;
+}
 .article-page article {
   background-color: white;
   padding: 1rem;
@@ -596,7 +611,6 @@ ARTICLE PAGE
 }
 
 .article-page ul {
-  list-style-position: inside;
   list-style-type: "-    ";
 }
 
@@ -709,4 +723,9 @@ FOR MOBILE
       display: flex;
       flex-direction: column;
     }
+}
+.lienhe a{
+text-decoration: none;
+color: black;
+margin-left: 5px;
 }

@@ -81,8 +81,8 @@
                             </td>
                             <td>{{ $post['c_name'] }}</td>
                             <td>{{ $post['view'] }}</td>
-                            <td>{{ $post['time_created'] }}</td>
-                            <td>{{ $post['time_updated'] }}</td>
+                            <td>{{date('d/m/Y H:i:s' , strtotime( $post['time_created'])) }}</td>
+                            <td>{{date('d/m/Y H:i:s' , strtotime( $post['time_updated'])) }}</td>
                             <td class="has-text-centered">
                                 <div class="field is-grouped action">
                                     <p class="control">

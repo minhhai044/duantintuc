@@ -18,7 +18,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <title>News Hot | Trang chủ</title>
+    <title>@yield('title')</title>
     <!-- Latest compiled and minified CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 

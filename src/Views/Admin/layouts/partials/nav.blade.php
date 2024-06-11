@@ -13,22 +13,29 @@
         <li>
             <a class="" href="{{ url('admin/categories') }}">
                 <span class="icon">
-                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-list"></i>
                 </span> Categories
             </a>
         </li>
         <li>
             <a class="" href="{{ url('admin/posts') }}">
                 <span class="icon">
-                    <i class="fa fa-desktop"></i>
+                    <i class="fa fa-table"></i>
                 </span> Posts
             </a>
         </li>
         <li>
             <a class="" href="{{url('admin/accounts')}}">
                 <span class="icon">
-                    <i class="fa fa-table"></i>
+                    <i class="fa fa-desktop"></i>
                 </span> Accounts
+            </a>
+        </li>
+        <li>
+            <a class="" href="{{url('admin/comments')}}">
+                <span class="icon">
+                    <i class="fa fa-comment"></i>
+                </span> Comments
             </a>
         </li>
 

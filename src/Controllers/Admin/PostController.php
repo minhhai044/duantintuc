@@ -62,6 +62,7 @@ class PostController extends Controller
                 'title'             => $_POST['title'],
                 'excerpt'           => $_POST['excerpt'],
                 'content'           => $_POST['content'],
+                'account_id'        => $_SESSION['account']['id'],
             ];
 
             if (!empty($_FILES['img_post']) && $_FILES['img_post']['size'] > 0) {
@@ -180,13 +181,9 @@ class PostController extends Controller
 
             $this->post->update($id, $data);
 
-            // if ($post['img_post'] && file_exists(PATH_ROOT . $post['img_post'])) {
-            //     unlink(PATH_ROOT . $post['img_post']);
-            // }
-            // if ($post['img_header'] && file_exists(PATH_ROOT . $post['img_header'])) {
-            //     unlink(PATH_ROOT . $post['img_header']);
-            // }
-
+            if ($post['img_post'] && file_exists(PATH_ROOT . $post['img_post'])) {
+                unlink(PATH_ROOT . $post['img_post']);
+            }
             $_SESSION['status'] = true;
             $_SESSION['msg'] = 'Thao tác thành công!';
 

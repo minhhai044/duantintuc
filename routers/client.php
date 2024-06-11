@@ -20,4 +20,5 @@ $router->get('/category/{id}',  HomeController::class   . '@listcategory');
 $router->get('/detail/{id}',    HomeController::class   . '@detail');
 $router->get('/about',          HomeController::class   . '@about');
 $router->post('/search',        HomeController::class   . '@search');
+$router->post('/comment',       HomeController::class   . '@comment');
 

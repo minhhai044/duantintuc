@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Xem chi tiết: {{ $post['name'] }}
+    Xem chi tiết
 @endsection
 
 @section('content')
@@ -17,7 +17,13 @@
             @foreach ($post as $key => $value)
                 <tr>
                     <td>{{ $key }}</td>
-                    <td>{!! $value !!}</td>
+                    <td>
+                        @if ($key === 'img_post')
+                        <img src="{{asset($value)}}" alt="">
+                        @else
+                        <p>{{$value}}</p>
+                    @endif
+                </td>
                 </tr>
             @endforeach
 
